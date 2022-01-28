@@ -65,17 +65,19 @@
       
     </div>
 </div>
-   <div class="card1 mt-5" style="text-align: end;">
-     <h5>Last Updated - <span id="last"> </span></h5>
-   </div>
+  
   </div>
-  <div class="container" style="margin-top: 50px;">
-    
-</div>
+ 
+   
+   
+  
+  
 <div style="margin: 2px 20px;" id="otherstate">
    
 </div>
-
+<div class="card1 mt-5 mx-2" style="text-align: end;">
+    <h5>Last Updated - <span id="last"> </span></h5>
+  </div>
 
 <script>
  const setHeader = {
@@ -107,9 +109,13 @@
      
      var html="";
      data.data.regional.forEach(obj => {
-         console.log(obj)
-     html+=`
-     <div class="alert alert-dark" role="alert">
+         console.log(obj.loc)
+        if(obj.loc=='Uttarakhand'||obj.loc=='Delhi'||obj.loc=="Uttar Pradesh"){
+            console.log("Upper De rakha h")
+        }
+        else{
+            html+=`
+     <div class="alert alert-dark mt-2" role="alert">
   <h4 class="alert-heading">${obj.loc}</h4>
   <hr>
   <small class="mx-2 text-info">Total Confirmed:-${obj.totalConfirmed}</small>
@@ -117,6 +123,7 @@
   <small class="mx-2 text-danger">Death:-${obj.deaths}</small>
 </div>
     `
+        }
     });
   
   document.getElementById('otherstate').innerHTML = html;
