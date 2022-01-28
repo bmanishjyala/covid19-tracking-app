@@ -64,15 +64,17 @@
       </div>
       
     </div>
-    
-
-  
 </div>
    <div class="card1 mt-5" style="text-align: end;">
      <h5>Last Updated - <span id="last"> </span></h5>
    </div>
   </div>
-
+  <div class="container" style="margin-top: 50px;">
+    
+</div>
+<div style="margin: 2px 20px;" id="otherstate">
+   
+</div>
 
 
 <script>
@@ -102,6 +104,22 @@
      document.querySelector('#up_Recovered').innerText= data.data.regional[34].discharged;;
      document.querySelector('#up_Death').innerText=  data.data.regional[34].deaths;
      document.getElementById("last").innerText=data.lastRefreshed
+     
+     var html="";
+     data.data.regional.forEach(obj => {
+         console.log(obj)
+     html+=`
+     <div class="alert alert-dark" role="alert">
+  <h4 class="alert-heading">${obj.loc}</h4>
+  <hr>
+  <small class="mx-2 text-info">Total Confirmed:-${obj.totalConfirmed}</small>
+  <small class="mx-2 text-success">Discharged:-${obj.discharged}</small>
+  <small class="mx-2 text-danger">Death:-${obj.deaths}</small>
+</div>
+    `
+    });
+  
+  document.getElementById('otherstate').innerHTML = html;
 }).catch((err) => {
       console.log(err)
     })
