@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="https://iconape.com/wp-content/files/wf/370080/svg/370080.svg" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid19 Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" defer
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+        <!-- local javascript -->
+    <script defer src="/index.js"></script>
+    <!-- font used graphik -->
+    <link rel="stylesheet prefetch"
+        href="https://cdn.rawgit.com/mfd/e7842774e037edf15919037594a79b2b/raw/665bdfc532094318449f1010323c84013d5af953/graphik.css">
+
+    <!-- datatables css -->
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+
+    
+
+</head>
+
+<body>
+    <section class="top_section">
+        <div class="flexing">
+            <div class="title_lelo">
+                <h2>Covid-19</h2>
+            </div>
+            <div class="r_u_feeling pt-3">
+                <h6 class="fw-bold">Are you feeling sick?</h6>
+
+                <p class="text-wrap" style="font-size: 14px;">If you feel sick with any of covid-19 symptoms please call
+                    or SMS us immediately for help.</p>
+                <div class="d-flex justify-content-evenly">
+                    <button class="btn btn-danger rounded-pill px-4">
+                        Call Now
+                    </button>
+                    <button class="btn btn-primary rounded-pill px-4">
+                        Send SMS
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="prevention">
+        <h1 class="title">Prevention</h1>
+        <div class="mt-2 d-flex justify-content-evenly">
+            <div>
+                <img src="https://raw.githubusercontent.com/bmanishjyala/covid19-tracking-app/5be150374aaaaf366fe4367c64fb29938bcc7375/img/1.svg"
+                    alt="">
+                <p class="instruction">Wear a facemask</p>
+            </div>
+            <div>
+                <img src="https://raw.githubusercontent.com/bmanishjyala/covid19-tracking-app/5be150374aaaaf366fe4367c64fb29938bcc7375/img/2.svg"
+                    alt="">
+                <p class="instruction">Clean your hands often</p>
+            </div>
+            <div>
+                <img src="https://raw.githubusercontent.com/bmanishjyala/covid19-tracking-app/5be150374aaaaf366fe4367c64fb29938bcc7375/img/3.svg"
+                    alt="">
+                <p class="instruction">Avoid close contact</p>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="offcanvas offcanvas-bottom h-75" tabindex="-1" id="offcanvasBottom"
+        aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div  class="offcanvas-body small">
+            <table id="table_id" class="display">
+                <thead>
+                    <tr>
+                        <th>State</th>
+                        <th>Affected</th>
+                        <th>Recovered</th>
+                        <th>Death</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                   
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <section class="Statistics">
+        <h2 class="px-4">Statistics</h2>
+        <div id="sts" class="d-flex flex-column justify-content-evenly mt-3">
+            <div class="d-flex justify-content-evenly mb-4">
+                <div id="affected">
+                    <p>Affected</p>
+                    <h5 class="dataCovid" id="affectedData"></h5>
+
+
+                </div>
+                <div id="death">
+                    <p>Death</p>
+                    <h5 class="dataCovid" id="deathData"></h5>
+                </div>
+            </div>
+            <div class="d-flex justify-content-evenly">
+                <div id="recovered">
+                    <p>Recovered</p>
+                    <h5 class="dataCovid" id="recoveredData"></h5>
+                </div>
+                <div id="active">
+                    <p>Active</p>
+                    <h5 class="dataCovid" id="activeData"></h5>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+    <div class="d-flex align-items-center justify-content-center mt-3 mb-5">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
+            aria-controls="offcanvasBottom">Click here to Get More Data</button>
+    </div>
+    <!-- <div>
+        <img src="https://github.com/bmanishjyala/covid19-tracking-app/blob/main/img/symptom.png?raw=true" alt="">
+    </div> -->
+
+    <div class="banner mb-2">
+        <img src="https://raw.githubusercontent.com/bmanishjyala/covid19-tracking-app/c73312f187e201f26768e2493ae0b7e3b5f49580/img/5.svg"
+            alt="">
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf8" 
+        src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+</body>
+
+</html>
