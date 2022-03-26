@@ -7,6 +7,7 @@ const setHeader = {
 fetch('https://api.rootnet.in/covid19-in/stats/latest',setHeader)
 .then((response) => response.json())
 .then((data) => {
+    console.log(data.data.summary)
  let x=data.data.summary.total-data.data.summary.discharged-data.data.summary.deaths;
     document.getElementById("affectedData").innerHTML=data.data.summary.total
     document.getElementById("deathData").innerHTML=data.data.summary.deaths
