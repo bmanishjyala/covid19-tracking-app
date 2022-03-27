@@ -58,6 +58,9 @@
 }
 .banner{
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .banner>img{
     width: 100%;
