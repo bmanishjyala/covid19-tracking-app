@@ -1,7 +1,6 @@
 # covid19-tracking-app
-link:-https://bmanishjyala.github.io/covid19-tracking-app/
-<br>
-
+link for the Android App:-https://drive.google.com/file/d/1k9LkgJIBcIuVWrEYzaJi1DUGy-s5UQch/view?usp=sharing<br>
+link:-https://bmanishjyala.github.io/covid19-tracking-app/<br>
 
 Tech used:-<br>
 <br>1.HTML
