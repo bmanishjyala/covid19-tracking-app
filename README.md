@@ -3,7 +3,8 @@
 link for the Android App:-https://drive.google.com/file/d/1k9LkgJIBcIuVWrEYzaJi1DUGy-s5UQch/view?usp=sharing<br>
 
 link:-https://bmanishjyala.github.io/covid19-tracking-app/<br>
-![covis](https://user-images.githubusercontent.com/81969897/161285673-6fb2a887-a2b0-41ff-9660-452ec59e7d06.JPG)
+![Screenshot_20220401_200945](https://user-images.githubusercontent.com/81969897/161286144-6e8aab51-019f-4fe0-9fba-b17df94a7bf2.jpg)
+
 <br>
 Tech used:-<br>
 <br>1.HTML
